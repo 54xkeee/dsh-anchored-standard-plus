@@ -1,0 +1,21 @@
+dsh-anchored-standard-plus is a fork with local additions of
+dsh-anchored-standard (https://github.com/xiaobright/dsh-anchored-standard),
+which itself includes an adapted copy of the DeepSeek Harness Standard agent
+preset from:
+
+  https://github.com/deepseek-ai/deepseek-harness
+  commit 47f943859bef60e4160492346772ded9b24f765a
+
+DeepSeek Harness is distributed under the MIT License:
+
+  Copyright (c) 2026 DeepSeek
+
+The full MIT permission notice is included in this repository's LICENSE file.
+
+The per-turn format-guard plugin in this repository follows the near-field
+guidance pattern published by dsh-router-standard
+(https://github.com/yjh051108/dsh-router-standard, MIT).
+
+DeepSeek, DeepSeek Harness, dsh-anchored-standard and dsh-router-standard are
+names of their respective owners. This community project is not affiliated
+with or endorsed by DeepSeek.

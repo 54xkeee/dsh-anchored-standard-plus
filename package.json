@@ -1,0 +1,24 @@
+{
+  "name": "dsh-anchored-standard-plus",
+  "version": "0.2.0",
+  "private": false,
+  "description": "Fork of dsh-anchored-standard with per-turn format guard and deployment-plugin resident tools for DeepSeek Harness",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "test": "node verify/check.mjs",
+    "check": "node verify/check.mjs",
+    "verify": "node verify/check.mjs"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh-plugin",
+    "agent-preset",
+    "anchored-standard",
+    "v4-pro"
+  ]
+}
