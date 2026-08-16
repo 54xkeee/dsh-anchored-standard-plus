@@ -5,6 +5,17 @@
   "description": "Fork of dsh-anchored-standard with per-turn format guard and deployment-plugin resident tools for DeepSeek Harness",
   "type": "module",
   "license": "MIT",
+  "bin": {
+    "dsh-anchored-plus": "bin/dsh-anchored-plus.mjs"
+  },
+  "files": [
+    "bin/",
+    "preset/",
+    "verify/",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
   "engines": {
     "node": ">=22.19.0"
   },
@@ -20,5 +31,10 @@
     "agent-preset",
     "anchored-standard",
     "v4-pro"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/54xkeee/dsh-anchored-standard-plus.git"
+  },
+  "homepage": "https://github.com/54xkeee/dsh-anchored-standard-plus#readme"
 }

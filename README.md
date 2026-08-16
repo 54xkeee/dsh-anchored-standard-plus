@@ -39,6 +39,17 @@ DeepSeek V4 Pro 对**首次请求的 agent scaffold**高度敏感：官方 DSH �
 
 ## 安装
 
+### npm（推荐）
+
+```sh
+npm install -g dsh-anchored-standard-plus
+dsh-anchored-plus            # 复制 preset 到 $DSH_HOME/.agent-presets/anchored-standard
+# 已存在时：dsh-anchored-plus --force（旧目录自动备份）
+# 预览不写入：dsh-anchored-plus --dry-run
+```
+
+### 手动（GitHub）
+
 ```sh
 DSH_HOME="${DSH_HOME:-$HOME/.dsh}"
 mkdir -p "$DSH_HOME/.agent-presets"
