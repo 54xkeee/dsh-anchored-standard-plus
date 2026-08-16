@@ -8,6 +8,26 @@
 
 **TL;DR**：V4 Pro 在 DSH 里"变笨"，很多时候不是模型差，而是开局条件没对上它的 agent RL 训练接口。这个 preset 让**新会话的第一请求**精确复刻官方 minimal 的 RL 条件（一句话 system prompt + `bash` + `str_replace_editor`），把会话锚进高分轨迹；第一轮之后工具自动放开，能力不丢。顺手修了两个日常问题：晋升后你的插件工具直接可见、长对话不掉格式。
 
+*English abstract*: A DeepSeek Harness agent preset that reproduces the official
+minimal "exact RL prompt and schemas" on the **first request** (`bash` +
+`str_replace_editor` + one-sentence system prompt, no auto-injected context),
+locking DeepSeek V4 Pro into the high-ability trajectory, then re-opening tools
+after promotion. Adds resident deployment-plugin tools and a per-turn
+format/continuity guard for long conversations.
+
+## 效果演示
+
+**两阶段生命周期**：首请求 RL 锚定 → promotion → resident 工具放开：
+
+![dsh-anchored-standard-plus 两阶段锚定流程图](docs/images/anchor-flow.svg)
+
+**线上验证证据**：从真实会话 JSONL 读到的 `request/header` 快照（脱敏）：
+
+![真实会话 request/header 验证证据](docs/images/header-proof.svg)
+
+> 关键词：DeepSeek V4 Pro 降智修复 · DSH agent preset · RL scaffold 锚定 ·
+> `we need` / `let me` 轨迹指纹 · resident tools · 长对话格式守卫
+
 ---
 
 ## 目录

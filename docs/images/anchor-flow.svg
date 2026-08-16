@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="760" viewBox="0 0 1440 760" font-family="-apple-system, 'Segoe UI', 'Noto Sans SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1f6feb"/>
+      <stop offset="1" stop-color="#388bfd"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#238636"/>
+      <stop offset="1" stop-color="#3fb950"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="760" fill="url(#bg)"/>
+  <text x="72" y="76" font-size="34" font-weight="700" fill="#e6edf3">dsh-anchored-standard-plus · 两阶段轨迹锚定</text>
+  <text x="72" y="112" font-size="18" fill="#8b949e">首请求落进 V4 Pro 的 RL 训练接口 → 轨迹锁定 → 晋升后逐步放开工具，插件不丢、格式不丢</text>
+
+  <!-- Phase 1 -->
+  <rect x="72" y="160" width="600" height="430" rx="18" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="72" y="160" width="600" height="54" rx="18" fill="url(#blue)"/>
+  <text x="96" y="195" font-size="22" font-weight="700" fill="#ffffff">请求 #1 · bootstrap（RL 锚定）</text>
+  <rect x="104" y="244" width="536" height="72" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="128" y="272" font-size="16" fill="#8b949e">system prompt（完整，只有一句）</text>
+  <text x="128" y="298" font-size="17" fill="#3fb950" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">You are a helpful software engineer assistant.</text>
+  <rect x="104" y="336" width="536" height="72" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="128" y="364" font-size="16" fill="#8b949e">tools（官方 minimal 真实 schema，恰好两个）</text>
+  <text x="128" y="392" font-size="17" fill="#79c0ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">bash · str_replace_editor</text>
+  <rect x="104" y="428" width="536" height="72" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="128" y="456" font-size="16" fill="#8b949e">自动注入上下文</text>
+  <text x="128" y="484" font-size="17" fill="#f85149" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">AGENTS.md 摘要 ✕ · 技能目录 ✕</text>
+  <rect x="104" y="520" width="536" height="56" rx="12" fill="#12261a" stroke="#238636"/>
+  <text x="128" y="555" font-size="17" font-weight="700" fill="#3fb950">首块轨迹：We need … · let me = 0 ✓</text>
+
+  <!-- Arrow -->
+  <path d="M 700 375 L 740 375" stroke="#8b949e" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8b949e"/></marker></defs>
+  <rect x="714" y="330" width="100" height="34" rx="17" fill="#d29922"/>
+  <text x="764" y="352" font-size="15" font-weight="700" fill="#0d1117" text-anchor="middle">promotion</text>
+  <text x="764" y="394" font-size="13" fill="#8b949e" text-anchor="middle">首次 tool/call 或回复</text>
+
+  <!-- Phase 2 -->
+  <rect x="820" y="160" width="548" height="430" rx="18" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="820" y="160" width="548" height="54" rx="18" fill="url(#green)"/>
+  <text x="844" y="195" font-size="22" font-weight="700" fill="#ffffff">请求 #2 起 · resident（能力放开）</text>
+  <rect x="852" y="244" width="484" height="164" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="876" y="272" font-size="16" fill="#8b949e">常驻工具（bootstrap + 发现 + 你的插件）</text>
+  <text x="876" y="306" font-size="16" fill="#79c0ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">bash · str_replace_editor</text>
+  <text x="876" y="334" font-size="16" fill="#79c0ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">dev_tool_search · skill_search · skill_load</text>
+  <text x="876" y="362" font-size="16" fill="#d2a8ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">antigravity_agent · antigravity_agent_status</text>
+  <text x="876" y="390" font-size="16" fill="#d2a8ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">vision · web_search</text>
+  <rect x="852" y="428" width="484" height="72" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="876" y="456" font-size="16" fill="#8b949e">重工具按需解锁（dev_tool_search）</text>
+  <text x="876" y="484" font-size="16" fill="#e3b341" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">subagent · workflow · jobs · todo_write …</text>
+  <rect x="852" y="520" width="484" height="56" rx="12" fill="#12261a" stroke="#238636"/>
+  <text x="876" y="555" font-size="17" font-weight="700" fill="#3fb950">每轮 format-guard：格式、基准数据、表格不丢 ✓</text>
+
+  <text x="72" y="680" font-size="15" fill="#8b949e">不要给已产生内容的会话中途换 preset；新会话第一句话就是真实任务。</text>
+  <text x="72" y="710" font-size="15" fill="#8b949e">证据：Project2 同题同环境 standard 91 / PTC 92 / minimal 99·96 / anchored-standard 98·99。</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="820" viewBox="0 0 1440 820" font-family="-apple-system, 'Segoe UI', 'Noto Sans SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="820" fill="url(#bg)"/>
+  <text x="72" y="70" font-size="30" font-weight="700" fill="#e6edf3">线上验证：从真实会话 JSONL 读到的 request/header</text>
+  <text x="72" y="104" font-size="16" fill="#8b949e">示例会话（脱敏）：便携式矢量网络分析仪毕设 PPT · deepseek-vision-official / deepseek-v4-pro / max</text>
+
+  <!-- Terminal -->
+  <rect x="72" y="140" width="1296" height="620" rx="16" fill="#010409" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="116" cy="178" r="9" fill="#f85149"/>
+  <circle cx="144" cy="178" r="9" fill="#d29922"/>
+  <circle cx="172" cy="178" r="9" fill="#3fb950"/>
+  <text x="210" y="186" font-size="15" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">session.jsonl · request/header</text>
+
+  <text x="104" y="238" font-size="16" fill="#58a6ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">#1  reason: initial   →  RL anchor</text>
+  <text x="104" y="270" font-size="15" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">  system: "You are a helpful software engineer assistant."</text>
+  <text x="104" y="298" font-size="15" fill="#3fb950" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">  tools : ["bash", "str_replace_editor"]</text>
+  <text x="104" y="326" font-size="14" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">  context: 无 AGENTS 摘要 · 无技能目录</text>
+
+  <line x1="104" y1="356" x2="1336" y2="356" stroke="#21262d"/>
+  <text x="104" y="394" font-size="16" fill="#e3b341" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">#2  reason: change   →  promotion（首轮后自动）</text>
+  <text x="104" y="426" font-size="15" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">  tools : bash, str_replace_editor, dev_tool_search, skill_search, skill_load,</text>
+  <text x="104" y="452" font-size="15" fill="#d2a8ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">          antigravity_agent, antigravity_agent_status, vision, web_search</text>
+
+  <line x1="104" y1="482" x2="1336" y2="482" stroke="#21262d"/>
+  <text x="104" y="520" font-size="16" fill="#3fb950" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">#3  reason: change   →  按需解锁（dev_tool_search 显式解锁后）</text>
+  <text x="104" y="552" font-size="15" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">  tools : … subagent, subagent_fork, interrupt_agent, list_agents, send_message</text>
+
+  <line x1="104" y1="582" x2="1336" y2="582" stroke="#21262d"/>
+  <text x="104" y="620" font-size="16" fill="#58a6ff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">#4  每轮格式守卫（第二个真实用户消息起）</text>
+  <text x="104" y="652" font-size="15" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">  user/message source: { kind: "plugin", plugin: "format-guard" }</text>
+  <text x="104" y="678" font-size="14" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">  固定文本：保持 Markdown 结构 · 不凭记忆重算已验证数据 · 继续引用基准表</text>
+
+  <text x="104" y="728" font-size="15" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">轨迹指纹：we=7 · we need=1 · let me=0（整会话 203 次工具调用）</text>
+
+  <text x="72" y="792" font-size="14" fill="#8b949e">原始会话含个人路径与推理全文，不公开；公开的是可复算的 header 与聚合指标。</text>
+</svg>
